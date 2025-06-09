@@ -1,0 +1,60 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+///make it paginated
+---
+
+<MainLayout title="Servant List">
+    <nav>
+        <div class="nav__menu"></div>
+        <figure class="nav__logo"><img src="/logo" alt="web logo"></figure>
+        <a href="/src/pages/homepage/home" class="nav__title--home">HOME</a>
+        <a href="/src/pages/servants/list" class="nav__title--servants">SERVANTS</a>
+        <a href="/src/pages/ce/list" class="nav__title--ce">CRAFT ESSENCES</a>
+        <figure class="nav__user"><img src="/userImage" alt="user profile image"></figure>
+        ///login
+    </nav>
+    
+    <header>
+        <h1 class="header__title">Servants list</h1>
+        <div class="header__carrousel--showcase"></div>
+    </header>
+
+    <main>
+        <article class="main__article">
+            <div class="main__article__favServantShowcase"></div>
+        </article>
+
+        <article class="main__article__top3Servants">
+
+        </article>
+
+        <article class="main__article__top3CE">
+            
+        </article>
+
+        <section class="main__section__card-container">
+        
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer__top">
+            <figure class="footer__top__logo"><img src="/logo" alt="web logo"></figure>
+            <button class="footer__top__socials--ig"></button>
+            <button class="footer__top__socials--tw"></button>
+            <button class="footer__top__socials--yt"></button>
+        </section>
+        
+        <section class="footer__mid">
+            ///index of pages
+        </section>
+
+
+        <section class="footer__bottom">
+            <p class="footer__copyright"></p>
+            <a href="#" class="footer__privacy"></a>
+            <a href="#" class="footer__terms"></a>
+        </section>
+        
+    </footer>
+</MainLayout>
