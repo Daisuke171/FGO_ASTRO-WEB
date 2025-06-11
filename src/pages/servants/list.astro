@@ -5,17 +5,22 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <MainLayout title="Servant List">
     <nav>
-        <div class="nav__menu"></div>
-        <figure class="nav__logo"><img src="/logo" alt="web logo"></figure>
+        <figure class="nav__menu"><img src="/icons/menu.svg" alt="hamburguer menu"></figure>
+        <figure class="nav__logo"><img src="/logo/logo.png" alt="web logo"></figure>
         <a href="/src/pages/homepage/home" class="nav__title--home">HOME</a>
         <a href="/src/pages/servants/list" class="nav__title--servants">SERVANTS</a>
         <a href="/src/pages/ce/list" class="nav__title--ce">CRAFT ESSENCES</a>
-        <figure class="nav__user"><img src="/userImage" alt="user profile image"></figure>
-        ///login
+        <figure class="nav__search-bttn"><img src="/icons/search.svg" alt="magnifier button"></figure>
+        <figure class="nav__user"><img src="/userprofile/usrDefault.png" alt="user profile image"></figure>
+        <!-- login -->
     </nav>
     
     <header>
         <h1 class="header__title">Servants list</h1>
+        <form action="https://example.com/search" method="get">
+            <input type="text" name="q" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
         <div class="header__carrousel--showcase"></div>
     </header>
 
@@ -39,14 +44,23 @@ import MainLayout from "../layouts/MainLayout.astro";
 
     <footer>
         <section class="footer__top">
-            <figure class="footer__top__logo"><img src="/logo" alt="web logo"></figure>
-            <button class="footer__top__socials--ig"></button>
-            <button class="footer__top__socials--tw"></button>
-            <button class="footer__top__socials--yt"></button>
+            <figure class="footer__top__logo">
+                <img src="/logo/logo.png" alt="web logo">
+            </figure>
+
+            <a href="" class="footer__top__socials--ig">
+                <figure class="social-icons"><img src="/icons/ig_icon.svg" alt="instagram icon"></figure>
+            </a>
+            <a href="" class="footer__top__socials--tw">
+                <figure class="social-icons"><img src="/icons/x_icon.svg" alt="twitter icon"></figure>
+            </a>
+            <a href="" class="footer__top__socials--yt">
+                <figure class="social-icons"><img src="/icons/yt_icon.svg" alt="youtube icon"></figure>
+            </a>
         </section>
         
         <section class="footer__mid">
-            ///index of pages
+            <!-- index of pages -->
         </section>
 
 
@@ -58,3 +72,50 @@ import MainLayout from "../layouts/MainLayout.astro";
         
     </footer>
 </MainLayout>
+
+<!--DESKTOP FIRST APPROACH -->
+<style>
+    .html{
+        display: block;
+        width: ;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .social-icons,  .social-icons > img{
+        width: 25px;
+        height: 25px;
+    }   
+
+
+    figure{
+        margin: 0;
+    }
+    .nav__menu > img{
+        width: 20px;
+    }
+    .nav__search-bttn > img{
+        width: 30px;
+    }
+    .nav__logo > img, .footer__top__logo > img{
+        width: 200px;
+        height: 100px;
+    }
+
+    .nav__user > img{
+        width: 50px;
+        height: 50px;
+    }
+
+
+    header{
+        height: 100svh;
+        text-align: center;
+    }
+</style>
