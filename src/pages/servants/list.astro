@@ -48,26 +48,50 @@ import MainLayout from "../layouts/MainLayout.astro";
                 <img src="/logo/logo.png" alt="web logo">
             </figure>
 
-            <a href="" class="footer__top__socials--ig">
-                <figure class="social-icons"><img src="/icons/ig_icon.svg" alt="instagram icon"></figure>
-            </a>
-            <a href="" class="footer__top__socials--tw">
-                <figure class="social-icons"><img src="/icons/x_icon.svg" alt="twitter icon"></figure>
-            </a>
-            <a href="" class="footer__top__socials--yt">
-                <figure class="social-icons"><img src="/icons/yt_icon.svg" alt="youtube icon"></figure>
-            </a>
+            <div class="footer__top__socials">
+                <a href="" class="footer__top__socials--ig">
+                 <figure class="social-icons"><img src="/icons/ig_icon.svg" alt="instagram icon"></figure>
+                </a>
+                <a href="" class="footer__top__socials--tw">
+                    <figure class="social-icons"><img src="/icons/x_icon.svg" alt="twitter icon"></figure>
+                </a>
+                <a href="" class="footer__top__socials--yt">
+                    <figure class="social-icons"><img src="/icons/yt_icon.svg" alt="youtube icon"></figure>
+                </a>
+            </div>
         </section>
-        
+        <hr>
         <section class="footer__mid">
-            <!-- index of pages -->
+            <div class="footer__mid__indexes-container">
+                <div class="footer__mid__index">
+                    <h2 class="footer__mid__index--titles">Servants</h2>
+                    <a href="" class="footer__mid__index--anchors">Catalogue</a>
+                    <a href="" class="footer__mid__index--anchors">Tier List</a>
+                    <a href="" class="footer__mid__index--anchors">Favorites</a>
+                </div>
+                <div class="footer__mid__index">
+                    <h2 class="footer__mid__index--titles">Craft Essences</h2>
+                    <a href="" class="footer__mid__index--anchors">Catalogue</a>
+                    <a href="" class="footer__mid__index--anchors">Favorites</a>
+                </div>
+                <div class="footer__mid__index">
+                    <h2 class="footer__mid__index--titles">Materials</h2>
+                    <a href="" class="footer__mid__index--anchors">List</a>
+                    <a href="" class="footer__mid__index--anchors">Drop Rates</a>
+                </div>
+            </div>
+
+            <figure class="footer__mid__chibi"><img src="/placeholder.gif" alt="Learning with manga FGO chibi png"></figure>
         </section>
 
 
         <section class="footer__bottom">
-            <p class="footer__copyright"></p>
-            <a href="#" class="footer__privacy"></a>
-            <a href="#" class="footer__terms"></a>
+            <p class="footer__copyright">Copyright &copy 2025 Daisuke171 All rights reserved</p>
+            <div class="footer__bottom__links">
+                <a href="#" class="footer__privacy">Privacy Policy</a>
+                <a href="#" class="footer__terms">Terms & Conditions</a>
+            </div>
+
         </section>
         
     </footer>
@@ -77,22 +101,22 @@ import MainLayout from "../layouts/MainLayout.astro";
 <style>
     .html{
         display: block;
-        width: ;
     }
 
     nav{
+        background-color: azure;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
         justify-content: space-around;
+        padding-bottom: 1rem;
     }
 
-    .social-icons,  .social-icons > img{
+    .social-icons, .social-icons > img{
         width: 25px;
         height: 25px;
     }   
-
 
     figure{
         margin: 0;
@@ -106,6 +130,8 @@ import MainLayout from "../layouts/MainLayout.astro";
     .nav__logo > img, .footer__top__logo > img{
         width: 200px;
         height: 100px;
+        position: relative;
+        top: 10px;
     }
 
     .nav__user > img{
@@ -118,4 +144,60 @@ import MainLayout from "../layouts/MainLayout.astro";
         height: 100svh;
         text-align: center;
     }
+
+
+    .footer__top{
+        background-color: azure;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3rem;
+    }
+    .footer__top__socials{
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+
+    .footer__mid{
+        background-color: rgb(198, 237, 237);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 3rem;
+    }
+    .footer__mid__index{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer__mid__index--titles{
+        margin: 0;
+        margin-bottom: 0.5rem;
+    }
+    .footer__mid__indexes-container{
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+    }
+    .footer__mid__chibi{
+        justify-self: right;
+    }
+    
+    
+    .footer__bottom{
+        background-color: azure;
+        display: flex;
+        padding: 1rem 3rem;
+        justify-content: space-between;
+    }
+    .footer__bottom__links{
+        display: flex;
+        gap: 2rem;
+    }
+    .footer__copyright{
+        margin: 0;
+    }
+
 </style>
