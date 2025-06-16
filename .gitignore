@@ -6,6 +6,11 @@ dist/
 # dependencies
 node_modules/
 
+public/frames/mash.png
+public/frames/reference.png
+public/frames/CardFrame.jpg
+public/frames/CardFrame.psd
+
 # logs
 npm-debug.log*
 yarn-debug.log*

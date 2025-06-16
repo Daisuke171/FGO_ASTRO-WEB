@@ -1,0 +1,31 @@
+---
+const { id, name, className, img, rarity, noblePhantasms } = Astro.props;
+
+export interface Props{
+    id: number,
+    name: string,
+    className: string,
+    img: string,
+    rarity: number,
+    noblePhantasms: string 
+}
+---
+
+<article class="card-container">
+    <img src={img} alt=`${name}'s portrait'`>
+
+    <div class="card-container__badge">
+        <h1 class="card-container__badge--title">${name}</h1>
+        <h2 class="card-container__badge--subtitle">${className}</h2>
+        <img src="#" alt="" class="card-container__badge--icon">
+    </div>
+
+</article>
+
+
+<style>
+    .card-container{
+        min-width: 150px;
+        height: 100%;
+    }
+</style>

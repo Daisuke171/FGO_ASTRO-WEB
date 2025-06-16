@@ -1,6 +1,9 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-///make it paginated
+import ServantCard from "../components/ServantCard.astro"
+
+
+
 ---
 
 <MainLayout title="Servant List">
@@ -41,6 +44,10 @@ import MainLayout from "../layouts/MainLayout.astro";
         
         </section>
     </main>
+
+    <section class="card-container" id="fate-go-card-container">
+        <!--CARDS HERE -->
+    </section>
 
     <footer>
         <section class="footer__top">
@@ -95,6 +102,8 @@ import MainLayout from "../layouts/MainLayout.astro";
         </section>
         
     </footer>
+
+    <script is:inline type="module" src="/scripts/fetchData.ts"></script>
 </MainLayout>
 
 <!--DESKTOP FIRST APPROACH -->
@@ -143,6 +152,14 @@ import MainLayout from "../layouts/MainLayout.astro";
     header{
         height: 100svh;
         text-align: center;
+    }
+
+    main{
+        height: fit-content;
+    }
+
+    .card-container{
+        width: 100px;
     }
 
 
