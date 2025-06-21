@@ -1,31 +1,12 @@
 ---
-const { id, name, className, img, rarity, noblePhantasms } = Astro.props;
-
-export interface Props{
-    id: number,
-    name: string,
-    className: string,
-    img: string,
-    rarity: number,
-    noblePhantasms: string 
-}
+import "../styles/CardServant.css";
 ---
 
-<article class="card-container">
-    <img src={img} alt=`${name}'s portrait'`>
+<section class="card-container" id="fate-go-card-container">
+    <!--CARDS HERE -->
+</section>
 
-    <div class="card-container__badge">
-        <h1 class="card-container__badge--title">${name}</h1>
-        <h2 class="card-container__badge--subtitle">${className}</h2>
-        <img src="#" alt="" class="card-container__badge--icon">
-    </div>
-
-</article>
+<script is:inline type="module" src="/scripts/fetchData.ts"></script>
 
 
-<style>
-    .card-container{
-        min-width: 150px;
-        height: 100%;
-    }
-</style>
+

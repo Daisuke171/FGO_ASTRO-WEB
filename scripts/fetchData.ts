@@ -27,10 +27,13 @@ console.log(DATA[1].name);
 
 function createCard(data: any, index: number){
     const card = document.createElement("div");
+    card.classList.add("ServantCard");
     card.innerHTML = `
-        <h1>${data[index].name}</h1>
-        <img class="servant-img" src="https://static.atlasacademy.io/NA/CharaGraph/${data[index].id}/${data[index].id}a@1.png"" alt="Servant's portrait">
-        <img class="servant-frame" src="/public/frames/CardFrame.png" alt="Servant's frame">
+        <h1 class="ServantCard__servant-title">${data[index].name}</h1>
+        <div class="ServantCard__saint-graph">
+            <img class="saint-graph__servant-img" src="https://static.atlasacademy.io/NA/CharaGraph/${data[index].id}/${data[index].id}a@2.png"" alt="Servant's portrait">
+            <img class="saint-graph__servant-frame" src="/public/frames/CardFrame.png" alt="Servant's frame">
+        </div>
     `
     return card;
 }

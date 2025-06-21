@@ -6,6 +6,8 @@ import ServantCard from "../components/ServantCard.astro"
 
 ---
 
+
+
 <MainLayout title="Servant List">
     <nav>
         <figure class="nav__menu"><img src="/icons/menu.svg" alt="hamburguer menu"></figure>
@@ -45,8 +47,8 @@ import ServantCard from "../components/ServantCard.astro"
         </section>
     </main>
 
-    <section class="card-container" id="fate-go-card-container">
-        <!--CARDS HERE -->
+    <section class="section__servant-card-container">
+        <ServantCard type="module" is:inline />
     </section>
 
     <footer>
@@ -103,7 +105,7 @@ import ServantCard from "../components/ServantCard.astro"
         
     </footer>
 
-    <script is:inline type="module" src="/scripts/fetchData.ts"></script>
+
 </MainLayout>
 
 <!--DESKTOP FIRST APPROACH -->
@@ -150,16 +152,20 @@ import ServantCard from "../components/ServantCard.astro"
 
 
     header{
-        height: 100svh;
+        height: 300px; /*cambiar despues */
         text-align: center;
+        background-color: rgb(198, 237, 237);
     }
 
     main{
         height: fit-content;
     }
 
-    .card-container{
-        width: 100px;
+    .section__servant-card-container{
+        display: block;
+        width: 100%;
+        position: relative;
+        height: max-content;
     }
 
 
@@ -216,5 +222,7 @@ import ServantCard from "../components/ServantCard.astro"
     .footer__copyright{
         margin: 0;
     }
+
+
 
 </style>
